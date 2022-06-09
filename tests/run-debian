@@ -11,7 +11,8 @@ apt-get install -y eatmydata
 eatmydata apt-get -y --purge dist-upgrade
 
 # install build dependencies
-eatmydata apt-get install --no-install-recommends -y python3-all python3-setuptools python3-dbus python3-gi gir1.2-glib-2.0 \
+eatmydata apt-get install --no-install-recommends -y git python3-all python3-setuptools \
+    python3-dbus python3-gi gir1.2-glib-2.0 \
     pyflakes3 pycodestyle \
     dbus libnotify-bin upower network-manager bluez ofono ofono-scripts
 

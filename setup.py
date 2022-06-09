@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 '''python-dbusmock - Mock D-Bus objects for testing'''
 
+import subprocess
+
 import setuptools
 
 with open('README.md', encoding="UTF-8") as f:
     readme = f.read()
 
-with open('NEWS', 'r', encoding="UTF-8") as f:
-    version = f.readline().split('[')[1].split(']')[0]
+version = subprocess.check_output(['git', 'describe'], universal_newlines=True).strip()
 
 setuptools.setup(
     name='python-dbusmock',
